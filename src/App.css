@@ -1,38 +1,191 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=text], input[type=email], input[type=password], textarea {
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #8f8f8f;
+  transition: 0.2s;
+  outline: none;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus {
+  border: 3px solid #555;
+}
+
+body {
+  background-color: #EDEDED;
+}
+
+nav {
+  margin: auto;
   text-align: center;
+  width: 100%;
+  font-family: arial;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  background: #1F8A70;
+  padding: 0 20px;
+  list-style: none;
+  position: relative;
+  display: inline-table;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav .nav-bar {
   display: flex;
-  flex-direction: column;
+}
+
+nav .nav-title {
+  display: flex;
+  justify-content: start;
+  font-size: 25px;
+}
+
+nav .nav-link {
+  display: flex;
+  justify-content: end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 16px;
+}
+
+nav ul li {
+  transition: .3s;
+  float: left;
+}
+
+nav ul li:hover {
+  background: #156652;
+}
+
+nav ul li a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+main.container {
+  padding: 30px;
+  max-width: 50vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #fbfafa;
+}
+
+main .thread {
+  margin: 20px 0;
+  padding: 25px 20px;
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 5px;
+}
+
+main .credit {
+  color: rgb(98, 98, 98);
+}
+
+main .credit span {
+  font-weight: bold;
+}
+
+main .leaderboard-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  margin-bottom: 13px;
+  font-size: 18px;
+}
+
+main .leaderboard {
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 0;
+  font-size: 18px;
+}
+
+main .leaderboard img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+main .leaderboard .leaderboard-photo {
+  display: flex;
+  align-items: center;
+}
+
+main .thread-detail {
+  margin-bottom: 20px;
+}
+
+main .thread-detail h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+main .thread-detail .thread-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+main .thread-detail .credit {
+  font-size: 18px;
+  color: rgb(98, 98, 98);
+}
+
+main .thread-form {
+  margin-bottom: 20px;
+}
+
+main .thread-form .title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.button {
+  width: 100%;
+  padding: 5px;
+  background-color: #1F8A70;
+  /* Green */
+  border: none;
   color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5px;
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+main .comments .comment-item .comment-top {
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main .comments .comment-item .comment-top img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+main .comments .comment-item .comment-top .comment-photo {
+  display: flex;
+  align-items: center;
 }
