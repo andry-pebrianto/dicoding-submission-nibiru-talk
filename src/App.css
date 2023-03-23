@@ -6,8 +6,9 @@
   font-family: 'Dosis', sans-serif;
 }
 
-a {
+a, .link {
   text-decoration: none;
+  cursor: pointer;
 }
 
 input[type=text], input[type=email], input[type=password], textarea {
@@ -73,7 +74,7 @@ nav ul li:hover {
   background: #156652;
 }
 
-nav ul li a {
+nav ul li a, nav ul li .link {
   display: block;
   padding: 20px;
   color: #fff;
@@ -171,6 +172,11 @@ main .thread-form .title {
   font-size: 16px;
   margin-top: 5px;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+main .comments .comment-item {
+  margin-bottom: 20px;
 }
 
 main .comments .comment-item .comment-top {
@@ -188,4 +194,12 @@ main .comments .comment-item .comment-top img {
 main .comments .comment-item .comment-top .comment-photo {
   display: flex;
   align-items: center;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
