@@ -10,7 +10,12 @@ export default function DetailThreadItem({ detailThread }) {
       <span className="credit">
         <p>
           {moment(detailThread?.createdAt).startOf("hour").fromNow()} oleh{" "}
-          <span>{detailThread?.owner?.name}</span>
+          <img
+            style={{ marginLeft: "8px" }}
+            src={detailThread?.owner?.avatar}
+            alt="Profile"
+          />
+          <span style={{ marginLeft: "4px" }}>{detailThread?.owner?.name}</span>
         </p>
       </span>
     </div>

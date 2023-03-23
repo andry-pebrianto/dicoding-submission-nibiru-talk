@@ -101,9 +101,7 @@ const api = (() => {
 
   async function getThreads() {
     const response = await _fetchWithAuth(`${BASE_URL}/threads`);
-
     const responseJson = await response.json();
-
     const { status, message } = responseJson;
 
     if (status !== "success") {
@@ -114,7 +112,26 @@ const api = (() => {
       data: { threads },
     } = responseJson;
 
-    return threads;
+    const responseUsers = await _fetchWithAuth(`${BASE_URL}/users`);
+    const {
+      data: { users },
+    } = await responseUsers.json();
+
+    const threadsUsersCombined = threads.map((thread) => {
+      const userCreator = users.filter((user) => thread.ownerId === user.id);
+
+      if (userCreator.length) {
+        thread.name = userCreator[0].name;
+        thread.avatar = userCreator[0].avatar;
+      } else {
+        thread.name = null;
+        thread.avatar = null;
+      }
+
+      return thread;
+    });
+
+    return threadsUsersCombined;
   }
 
   async function getDetailThread(id) {

@@ -5,7 +5,7 @@ import moment from "moment/moment";
 
 function ThreadItem({ thread }) {
   const {
-    id, title, body, createdAt, ownerId, totalComments
+    id, title, body, createdAt, avatar, name, totalComments
   } = thread;
 
   return (
@@ -20,7 +20,12 @@ function ThreadItem({ thread }) {
       >
         <p>
           {moment(createdAt).startOf("hour").fromNow()} oleh{" "}
-          <span>{ownerId}</span>
+          <img
+            style={{ marginLeft: "8px" }}
+            src={avatar}
+            alt="Profile"
+          />
+          <span style={{ marginLeft: "4px" }}>{name}</span>
         </p>
         <p>{totalComments} Komentar</p>
       </span>

@@ -150,6 +150,30 @@ main .thread-detail .credit {
   color: rgb(98, 98, 98);
 }
 
+main .thread-detail p {
+  display: flex;
+  align-items: center;
+}
+
+main .thread-detail img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+main .thread p {
+  display: flex;
+  align-items: center;
+}
+
+main .thread img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
 main .thread-form {
   margin-bottom: 20px;
 }
