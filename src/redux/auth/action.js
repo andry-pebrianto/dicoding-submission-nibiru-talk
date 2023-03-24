@@ -41,6 +41,16 @@ const registerProcess = ({ name, email, password }) => async (dispatch) => {
   }
 };
 
+const logoutProcess = () => async (dispatch) => {
+  try {
+    api.putAccessToken("");
+
+    dispatch(authProcess());
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export {
-  ActionType, authProcess, loginProcess, registerProcess,
+  ActionType, authProcess, loginProcess, registerProcess, logoutProcess,
 };

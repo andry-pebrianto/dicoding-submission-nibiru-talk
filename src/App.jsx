@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { HashLoader } from "react-spinners";
 import "./App.css";
 import Register from "./pages/Register";
+import NotFound from './pages/NotFound';
 import Threads from "./pages/Threads";
 import Detail from './pages/Detail';
 import Login from "./pages/Login";
@@ -32,6 +33,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     );
   }
@@ -41,6 +43,7 @@ export default function App() {
       <Route path="/" element={<Threads />} />
       <Route path="/thread/:id" element={<Detail />} />
       <Route path="/add" element={<Add />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

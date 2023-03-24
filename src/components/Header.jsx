@@ -1,17 +1,17 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { authProcess } from "../redux/auth/action";
-import api from "../utils/api";
+import { Link, useNavigate } from "react-router-dom";
+import { logoutProcess } from "../redux/auth/action";
 
 function Header() {
   const { auth } = useSelector((state) => state);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const logout = () => {
-    api.putAccessToken("");
-    dispatch(authProcess());
+    dispatch(logoutProcess());
+    navigate("/");
   };
 
   return (
