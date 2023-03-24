@@ -19,7 +19,7 @@ function ThreadItem({ thread }) {
         style={{ display: "flex", justifyContent: "space-between" }}
       >
         <p>
-          {moment(createdAt).startOf("hour").fromNow()} oleh{" "}
+          {moment(createdAt).format('Do MMMM YYYY, h:mm:ss a')} oleh{" "}
           <img
             style={{ marginLeft: "8px" }}
             src={avatar}

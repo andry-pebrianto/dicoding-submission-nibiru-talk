@@ -9,7 +9,7 @@ export default function DetailThreadItem({ detailThread }) {
       <div className="thread-title">{HTMLReactParser(detailThread?.body)}</div>
       <span className="credit">
         <p>
-          {moment(detailThread?.createdAt).startOf("hour").fromNow()} oleh{" "}
+          {moment(detailThread.createdAt).format('Do MMMM YYYY, h:mm:ss a')} oleh{" "}
           <img
             style={{ marginLeft: "8px" }}
             src={detailThread?.owner?.avatar}

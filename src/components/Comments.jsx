@@ -13,7 +13,7 @@ export default function Comments({ comments }) {
               <img src={comment.owner.avatar} alt="Profile" />
               <p style={{ marginLeft: "5px" }}>{comment.owner.name}</p>
             </div>
-            <p>{moment(comments?.createdAt).startOf("hour").fromNow()}</p>
+            <p>{moment(comment.createdAt).format('Do MMMM YYYY, h:mm:ss a')}</p>
           </div>
           <div style={{ marginTop: "3px", marginBottom: "5px" }}>
             {HTMLReactParser(comment.content)}
