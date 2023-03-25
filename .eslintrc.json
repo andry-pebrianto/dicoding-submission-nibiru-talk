@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -32,6 +33,8 @@
         "jsx-a11y/click-events-have-key-events": "off",
         "no-console": "off",
         "no-plusplus": "off",
-        "no-param-reassign": "off"
+        "no-param-reassign": "off",
+        "max-len": "off",
+        "react/jsx-no-useless-fragment": "off"
     }
 }

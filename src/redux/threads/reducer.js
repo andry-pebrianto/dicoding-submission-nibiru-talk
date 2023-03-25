@@ -24,7 +24,7 @@ const threadsReducer = (threads = initialState, action = {}) => {
         ...threads,
         isLoading: false,
         isError: true,
-        data: null,
+        data: [],
         error: payload,
       };
     default:

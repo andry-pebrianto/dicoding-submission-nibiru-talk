@@ -27,9 +27,15 @@ export default function Detail() {
           </div>
         ) : (
           <>
-            <DetailThreadItem detailThread={detailThread.data} />
-            <CommentForm id={params.id} />
-            <Comments comments={detailThread.data.comments} />
+            {detailThread.isError ? (
+              <h1>{detailThread.error}</h1>
+            ) : (
+              <>
+                <DetailThreadItem detailThread={detailThread.data} />
+                <CommentForm id={params.id} />
+                <Comments comments={detailThread.data.comments} />
+              </>
+            )}
           </>
         )}
       </main>
