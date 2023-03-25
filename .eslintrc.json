@@ -35,6 +35,8 @@
         "no-plusplus": "off",
         "no-param-reassign": "off",
         "max-len": "off",
-        "react/jsx-no-useless-fragment": "off"
+        "react/jsx-no-useless-fragment": "off",
+        "indent": "off",
+        "implicit-arrow-linebreak": "off"
     }
 }

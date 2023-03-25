@@ -1,16 +1,15 @@
 /**
- * test scenario for talksReducer
+ * test scenario for detailThread
  *
- * - threads function reducer
  * - should return the initial state when given by unknown action
  * - should return the threads data with action payload, isError equal to false, and error equal to null when given by GET_DETAIL_THREAD_SUCCESS action
  * - should return the threads data equal to null, isError equal to true, and error equal to action payload when given by GET_DETAIL_THREAD_ERROR action
  *
  */
 
-import threadsReducer from "./reducer";
+import detailThreadReducer from "./reducer";
 
-describe("threadsReducer function", () => {
+describe("detailThreadReducer function", () => {
   it("should return the initial state when given by unknown action", () => {
     // arrange
     const initialState = {
@@ -22,7 +21,7 @@ describe("threadsReducer function", () => {
     const action = { type: "UNKNOWN" };
 
     // action
-    const returnState = threadsReducer(initialState, action);
+    const returnState = detailThreadReducer(initialState, action);
 
     // assert
     expect(returnState).toEqual(initialState);
@@ -77,7 +76,7 @@ describe("threadsReducer function", () => {
     };
 
     // action
-    const returnState = threadsReducer(initialState, action);
+    const returnState = detailThreadReducer(initialState, action);
 
     // assert
     expect(returnState).toEqual(expectedState);
@@ -103,7 +102,7 @@ describe("threadsReducer function", () => {
     };
 
     // action
-    const returnState = threadsReducer(initialState, action);
+    const returnState = detailThreadReducer(initialState, action);
 
     // assert
     expect(returnState).toEqual(expectedState);
