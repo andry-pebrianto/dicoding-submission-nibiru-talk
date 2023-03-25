@@ -1,10 +1,10 @@
 /**
- * test scenario for threads
+ * testing scenario
  *
- * - should return the initial state when given by unknown action
- * - should return the threads data with action payload, isError equal to false, and error equal to null when given by GET_THREADS_SUCCESS action
- * - should return the threads data equal to [], isError equal to true, and error equal to action payload when given by GET_THREADS_ERROR action
- *
+ * - Reducer threadsReducer
+ *   - should return the initial state when given by unknown action
+ *   - should return the threads data with action payload, isError equal to false, and error equal to null when given by GET_THREADS_SUCCESS action
+ *   - should return the threads data equal to [], isError equal to true, and error equal to action payload when given by GET_THREADS_ERROR action
  */
 
 import threadsReducer from "./reducer";

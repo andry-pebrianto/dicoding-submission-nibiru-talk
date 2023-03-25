@@ -1,10 +1,10 @@
 /**
- * test scenario for detailThread
+ * testing scenario
  *
- * - should return the initial state when given by unknown action
- * - should return the threads data with action payload, isError equal to false, and error equal to null when given by GET_DETAIL_THREAD_SUCCESS action
- * - should return the threads data equal to null, isError equal to true, and error equal to action payload when given by GET_DETAIL_THREAD_ERROR action
- *
+ * - Reducer detailThreadReducer
+ *   - should return the initial state when given by unknown action
+ *   - should return the threads data with action payload, isError equal to false, and error equal to null when given by GET_DETAIL_THREAD_SUCCESS action
+ *   - should return the threads data equal to null, isError equal to true, and error equal to action payload when given by GET_DETAIL_THREAD_ERROR action
  */
 
 import detailThreadReducer from "./reducer";

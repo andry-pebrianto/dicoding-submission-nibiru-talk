@@ -1,10 +1,9 @@
 /**
- * test scenario for getDetailThreadProcess
+ * testing scenario
  *
- * - should dispatch action correctly when data fetching success
- * - should dispatch action and call alert correctly when data fetching failed
- *
- */
+ * - Thunk function getDetailThreadProcess
+ *   - should dispatch action correctly when data fetching success
+ *   - should dispatch action and call alert correctly when data fetching failed */
 
 import api from "../../utils/api";
 import { getDetailThreadProcess } from "./action";

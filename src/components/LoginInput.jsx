@@ -1,18 +1,14 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import useInput from "../hooks/useInput";
-import { loginProcess } from "../redux/auth/action";
 
-function LoginInput() {
+function LoginInput({ login }) {
   const [email, onEmailChange] = useInput("");
   const [password, onPasswordChange] = useInput("");
-
-  const dispatch = useDispatch();
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    dispatch(loginProcess({ email, password }));
+    login({ email, password });
   };
 
   return (

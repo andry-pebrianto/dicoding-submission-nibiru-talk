@@ -1,23 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import useInput from "../hooks/useInput";
-import { registerProcess } from "../redux/auth/action";
 
-function RegisterInput() {
+function RegisterInput({ register }) {
   const [name, onNameChange] = useInput("");
   const [email, onEmailChange] = useInput("");
   const [password, onPasswordChange] = useInput("");
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    dispatch(registerProcess({ name, email, password }));
-
-    navigate("/");
+    register({ name, email, password });
   };
 
   return (
